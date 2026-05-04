@@ -7,6 +7,9 @@ It combines:
 - vector search for relevant context,
 - and a lightweight UI for asking natural language questions.
 
+  ## Live Demo
+  https://safiri-kenya-web.onrender.com
+
 ## What the App Does
 
 Safiri Kenya helps users ask questions like:
