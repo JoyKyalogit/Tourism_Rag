@@ -1,0 +1,366 @@
+[
+  {
+    "destination": "Maasai Mara",
+    "region": "Narok County",
+    "best_months": ["July", "August", "September", "October"],
+    "best_time": "Early morning and late afternoon for game drives.",
+    "hotels": {
+      "budget": ["Mara Explorers Camp"],
+      "midrange": ["Mara Sopa Lodge", "Zebra Plains Mara Camp"],
+      "luxury": ["Mara Serena Safari Lodge", "JW Marriott Masai Mara Lodge"]
+    },
+    "activities": ["Game drives", "Great Migration viewing", "Hot air balloon safari", "Cultural village visits"],
+    "summary": "Maasai Mara is one of Kenya's top safari destinations, famous for big cats and the Great Migration season.",
+    "source_url": "https://www.magicalkenya.com/destinations/maasai-mara/"
+  },
+  {
+    "destination": "Amboseli",
+    "region": "Kajiado County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning for clear Mount Kilimanjaro views and evening for wildlife activity.",
+    "hotels": {
+      "budget": ["Nyati Safari Camp"],
+      "midrange": ["Amboseli Sopa Lodge", "Kibo Safari Camp"],
+      "luxury": ["Ol Tukai Lodge", "Tortilis Camp"]
+    },
+    "activities": ["Elephant viewing", "Photography", "Guided nature walks", "Bird watching"],
+    "summary": "Amboseli is known for large elephant herds and iconic views of Mount Kilimanjaro.",
+    "source_url": "https://www.kws.go.ke/amboseli-national-park"
+  },
+  {
+    "destination": "Diani Beach",
+    "region": "Kwale County",
+    "best_months": ["December", "January", "February", "July", "August", "September"],
+    "best_time": "Morning beach activities and sunset hours for coastal experiences.",
+    "hotels": {
+      "budget": ["Diani Backpackers"],
+      "midrange": ["Baobab Beach Resort", "Papillon Lagoon Reef"],
+      "luxury": ["Swahili Beach Resort", "The Sands at Nomad"]
+    },
+    "activities": ["Beach relaxation", "Snorkeling", "Kite surfing", "Wasini Island day trips"],
+    "summary": "Diani Beach offers white sand beaches, warm Indian Ocean waters, and water sports.",
+    "source_url": "https://www.magicalkenya.com/destinations/diani/"
+  },
+  {
+    "destination": "Watamu",
+    "region": "Kilifi County",
+    "best_months": ["January", "February", "March", "July", "August", "September"],
+    "best_time": "Morning for marine activities; evening for beach dining.",
+    "hotels": {
+      "budget": ["Mida Creek Eco Camp"],
+      "midrange": ["Turtle Bay Beach Club"],
+      "luxury": ["Hemingways Watamu", "Medina Palms"]
+    },
+    "activities": ["Dolphin watching", "Snorkeling in marine parks", "Deep sea fishing", "Beach leisure"],
+    "summary": "Watamu is ideal for marine adventures, coral reefs, and laid-back beach holidays.",
+    "source_url": "https://www.magicalkenya.com/destinations/watamu/"
+  },
+  {
+    "destination": "Naivasha",
+    "region": "Nakuru County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Early morning boat rides and late afternoon for park visits.",
+    "hotels": {
+      "budget": ["Fisherman's Camp"],
+      "midrange": ["Lake Naivasha Sopa Resort", "Enashipai Resort and Spa"],
+      "luxury": ["Chui Lodge", "Loldia House"]
+    },
+    "activities": ["Boat rides on Lake Naivasha", "Hell's Gate cycling", "Crescent Island walks", "Bird watching"],
+    "summary": "Naivasha combines lake experiences, adventure activities, and nearby national parks.",
+    "source_url": "https://www.magicalkenya.com/destinations/lake-naivasha/"
+  },
+  {
+    "destination": "Nairobi",
+    "region": "Nairobi County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for parks and museums; evening for city dining and nightlife.",
+    "hotels": {
+      "budget": ["Ibis Styles Nairobi"],
+      "midrange": ["Four Points by Sheraton Nairobi Airport", "Golden Tulip Westlands"],
+      "luxury": ["Hemingways Nairobi", "Villa Rosa Kempinski"]
+    },
+    "activities": ["Nairobi National Park", "Giraffe Centre", "Karen Blixen Museum", "City food tours"],
+    "summary": "Nairobi is a vibrant urban destination with wildlife, culture, and modern hospitality.",
+    "source_url": "https://www.magicalkenya.com/destinations/nairobi/"
+  },
+  {
+    "destination": "Tsavo",
+    "region": "Taita-Taveta and Kitui Counties",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Game drives in early morning and late afternoon.",
+    "hotels": {
+      "budget": ["Voi Wildlife Lodge"],
+      "midrange": ["Ashnil Aruba Lodge", "Voyager Ziwani Camp"],
+      "luxury": ["Finch Hattons Luxury Camp", "Kilaguni Serena Safari Lodge"]
+    },
+    "activities": ["Game drives", "Lugard Falls visits", "Bird watching", "Photography"],
+    "summary": "Tsavo East and West offer expansive wilderness, red elephants, and diverse landscapes.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/tsavo-east-national-park"
+  },
+  {
+    "destination": "Nanyuki and Mount Kenya",
+    "region": "Laikipia and Meru Counties",
+    "best_months": ["January", "February", "June", "July", "August", "September"],
+    "best_time": "Morning for outdoor adventures and clear mountain views.",
+    "hotels": {
+      "budget": ["Nanyuki Sports Club Guest House"],
+      "midrange": ["Fairmont Mount Kenya Safari Club"],
+      "luxury": ["Segera Retreat", "Ol Pejeta Bush Camp"]
+    },
+    "activities": ["Mountain trekking", "Conservancy safaris", "Horse riding", "Nature photography"],
+    "summary": "Nanyuki and Mount Kenya are best for highland adventure, luxury stays, and conservancy experiences.",
+    "source_url": "https://www.magicalkenya.com/destinations/mount-kenya/"
+  },
+  {
+    "destination": "Mombasa",
+    "region": "Mombasa County",
+    "best_months": ["December", "January", "February", "July", "August", "September"],
+    "best_time": "Morning for Old Town tours and late afternoon for beach and sunset experiences.",
+    "hotels": {
+      "budget": ["Tulip Cottages", "New Palm Tree Hotel"],
+      "midrange": ["CityBlue Creekside Hotel", "PrideInn Hotel Mombasa"],
+      "luxury": ["Serena Beach Resort and Spa", "Sarova Whitesands Beach Resort"]
+    },
+    "activities": ["Fort Jesus tours", "Old Town walks", "Beach relaxation", "Swahili food experiences"],
+    "summary": "Mombasa blends coastal beaches, Swahili heritage, and historical attractions for culture and leisure travelers.",
+    "source_url": "https://www.magicalkenya.com/destinations/mombasa/"
+  },
+  {
+    "destination": "Lamu",
+    "region": "Lamu County",
+    "best_months": ["January", "February", "July", "August", "September", "October"],
+    "best_time": "Morning for dhow excursions and evenings for sunset and cultural events.",
+    "hotels": {
+      "budget": ["Jua House", "Subira House"],
+      "midrange": ["Lamu House Hotel", "The Majlis Annex"],
+      "luxury": ["Peponi Hotel", "The Majlis Resort"]
+    },
+    "activities": ["Dhow sailing", "Lamu Old Town heritage tours", "Beach time at Shela", "Swahili cuisine experiences"],
+    "summary": "Lamu offers a unique island experience with rich Swahili culture, car-free streets, and serene beaches.",
+    "source_url": "https://www.magicalkenya.com/destinations/lamu/"
+  },
+  {
+    "destination": "Malindi",
+    "region": "Kilifi County",
+    "best_months": ["January", "February", "March", "July", "August", "September"],
+    "best_time": "Early morning for marine park trips and late afternoon for beach activities.",
+    "hotels": {
+      "budget": ["Marine Holiday House", "Travellers Inn Resort"],
+      "midrange": ["Ocean Beach Resort and Spa", "Kilili Baharini Resort"],
+      "luxury": ["Diamonds Dream of Africa", "Billionaire Resort and Retreat"]
+    },
+    "activities": ["Marine park snorkeling", "Deep sea fishing", "Beach walks", "Falconry and cultural tours"],
+    "summary": "Malindi is a coastal destination known for marine parks, beaches, and a mix of Kenyan and Italian influences.",
+    "source_url": "https://www.magicalkenya.com/destinations/malindi/"
+  },
+  {
+    "destination": "Samburu",
+    "region": "Samburu County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Game drives in early morning and late afternoon around riverine areas.",
+    "hotels": {
+      "budget": ["Samburu Riverside Camp"],
+      "midrange": ["Samburu Sopa Lodge", "Ashnil Samburu Camp"],
+      "luxury": ["Saruni Samburu", "Elephant Bedroom Camp"]
+    },
+    "activities": ["Game drives", "Bird watching", "Samburu cultural visits", "Photography"],
+    "summary": "Samburu is famous for rare northern species, striking landscapes, and authentic cultural experiences.",
+    "source_url": "https://www.magicalkenya.com/destinations/samburu/"
+  },
+  {
+    "destination": "Meru National Park",
+    "region": "Meru County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning and evening game drives for wildlife activity and cooler weather.",
+    "hotels": {
+      "budget": ["Ikweta Safari Camp"],
+      "midrange": ["Elsa's Kopje Lite Camp"],
+      "luxury": ["Elsa's Kopje", "Rhino River Camp"]
+    },
+    "activities": ["Game drives", "Rhino sanctuary visits", "Riverine nature walks", "Bird watching"],
+    "summary": "Meru National Park offers wild, less-crowded safari experiences with rivers, diverse wildlife, and rich conservation history.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/meru-national-park"
+  },
+  {
+    "destination": "Nakuru",
+    "region": "Nakuru County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning for wildlife viewing and afternoon for scenic viewpoints.",
+    "hotels": {
+      "budget": ["Sleepway Cottages", "Hotel Waterbuck"],
+      "midrange": ["Lake Nakuru Sopa Lodge", "Sarova Lion Hill Game Lodge"],
+      "luxury": ["The Cliff Nakuru", "Mbweha Camp"]
+    },
+    "activities": ["Lake Nakuru game drives", "Bird watching", "Baboon Cliff viewpoints", "Nature photography"],
+    "summary": "Nakuru is popular for lake and park tourism, with rhino sightings, birdlife, and dramatic escarpment scenery.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/lake-nakuru-national-park"
+  },
+  {
+    "destination": "Aberdare",
+    "region": "Nyeri and Nyandarua Counties",
+    "best_months": ["January", "February", "June", "July", "August", "September"],
+    "best_time": "Morning for moorland drives and evenings for lodge-based wildlife viewing.",
+    "hotels": {
+      "budget": ["Tusk Camp"],
+      "midrange": ["Aberdare Country Club", "The Ark Lodge"],
+      "luxury": ["Treetops Lodge", "The Aberdare Cottages and Fishing Lodge"]
+    },
+    "activities": ["Forest hikes", "Waterfall visits", "Wildlife viewing", "Trout fishing"],
+    "summary": "Aberdare is ideal for cool highland escapes, mountain forests, waterfalls, and lodge-based nature experiences.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/aberdare-national-park"
+  },
+  {
+    "destination": "Kisumu",
+    "region": "Kisumu County",
+    "best_months": ["June", "July", "August", "December", "January", "February"],
+    "best_time": "Morning for lakefront activities and evening for city dining.",
+    "hotels": {
+      "budget": ["Vittoria Suites", "Imperial Express"],
+      "midrange": ["Acacia Premier Hotel", "Sovereign Hotel"],
+      "luxury": ["Ciala Resort", "Grand Royal Swiss Hotel"]
+    },
+    "activities": ["Lake Victoria sunsets", "Impala Sanctuary visits", "Dunga Hill Camp experiences", "Cultural tours"],
+    "summary": "Kisumu combines lakeside relaxation, western Kenya culture, and growing urban hospitality options.",
+    "source_url": "https://www.magicalkenya.com/destinations/kisumu/"
+  },
+  {
+    "destination": "Kakamega Forest",
+    "region": "Kakamega County",
+    "best_months": ["January", "February", "June", "July", "August", "September"],
+    "best_time": "Morning for birding and nature walks before afternoon showers.",
+    "hotels": {
+      "budget": ["Rondo Retreat Centre"],
+      "midrange": ["Golf Hotel Kakamega", "Sheywe Guest House"],
+      "luxury": ["Kakamega Forest Lodge"]
+    },
+    "activities": ["Forest hiking", "Bird watching", "Butterfly spotting", "Cultural village visits"],
+    "summary": "Kakamega Forest is Kenya's iconic rainforest destination for biodiversity, birding, and eco-tourism.",
+    "source_url": "https://www.magicalkenya.com/destinations/kakamega-forest/"
+  },
+  {
+    "destination": "Lake Turkana",
+    "region": "Turkana County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Early mornings and late afternoons due to hot daytime temperatures.",
+    "hotels": {
+      "budget": ["Eliye Springs Camp"],
+      "midrange": ["Stegron Camp and Resort"],
+      "luxury": ["Desert Rose Lodge"]
+    },
+    "activities": ["Lake excursions", "Desert landscape photography", "Cultural encounters", "Archaeological site visits"],
+    "summary": "Lake Turkana offers dramatic desert-lake scenery, unique cultures, and frontier adventure tourism.",
+    "source_url": "https://www.magicalkenya.com/destinations/lake-turkana/"
+  },
+  {
+    "destination": "Marsabit",
+    "region": "Marsabit County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning for crater-lake views and wildlife tracking.",
+    "hotels": {
+      "budget": ["Jirime Hotel Marsabit"],
+      "midrange": ["Nomads Trail Hotel"],
+      "luxury": ["Sarova Shaba (nearby northern circuit)"]
+    },
+    "activities": ["Marsabit National Park visits", "Crater lake viewpoints", "Cultural tourism", "Camel safaris"],
+    "summary": "Marsabit is a northern Kenya adventure destination with volcanic landscapes, wildlife, and rich cultural heritage.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/marsabit-national-park-reserve"
+  },
+  {
+    "destination": "Isiolo and Shaba",
+    "region": "Isiolo County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning and evening for game drives and riverine wildlife.",
+    "hotels": {
+      "budget": ["Shaba Game Lodge Campsite"],
+      "midrange": ["Shaba Game Lodge", "Samburu Intrepids Camp"],
+      "luxury": ["Sarova Shaba Game Lodge", "Elephant Bedroom Camp"]
+    },
+    "activities": ["Game drives", "Bird watching", "Ewaso Nyiro river excursions", "Cultural visits"],
+    "summary": "Isiolo and Shaba form part of Kenya's northern safari circuit with unique wildlife and dramatic arid landscapes.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/shaba-national-reserve"
+  },
+  {
+    "destination": "Chyulu Hills",
+    "region": "Makueni and Kajiado Counties",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for hiking and horse riding with clear hill and Kilimanjaro views.",
+    "hotels": {
+      "budget": ["Kibwezi Guest Camps"],
+      "midrange": ["Campi ya Kanzi"],
+      "luxury": ["Ol Donyo Lodge"]
+    },
+    "activities": ["Hiking", "Horseback safaris", "Cave exploration", "Scenic photography"],
+    "summary": "Chyulu Hills offers scenic green hills, wilderness experiences, and premium eco-lodges in southern Kenya.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/chyulu-hills-national-park"
+  },
+  {
+    "destination": "Taita Hills",
+    "region": "Taita-Taveta County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Early morning and evening for game drives and viewpoints.",
+    "hotels": {
+      "budget": ["Salt Lick Safari Lodge Campsite"],
+      "midrange": ["Taita Hills Safari Resort and Spa"],
+      "luxury": ["Salt Lick Safari Lodge"]
+    },
+    "activities": ["Game drives", "Bird watching", "Scenic hill viewpoints", "Photography"],
+    "summary": "Taita Hills provides classic safari experiences with iconic lodges and easy access from the coast and Nairobi.",
+    "source_url": "https://www.magicalkenya.com/destinations/taita-hills/"
+  },
+  {
+    "destination": "Nairobi National Park",
+    "region": "Nairobi County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Early morning and late afternoon for active wildlife sightings.",
+    "hotels": {
+      "budget": ["Tamarind Tree Hotel"],
+      "midrange": ["Eka Hotel Nairobi", "Ole Sereni Hotel"],
+      "luxury": ["Hemingways Nairobi", "Radisson Blu Hotel Nairobi Upper Hill"]
+    },
+    "activities": ["Game drives", "Rhino sightings", "Safari walks nearby", "Photography with city skyline backdrop"],
+    "summary": "Nairobi National Park offers unique city-meets-safari experiences minutes from Kenya's capital.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/nairobi-national-park"
+  },
+  {
+    "destination": "Ol Pejeta Conservancy",
+    "region": "Laikipia County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning and evening for wildlife drives and conservation activities.",
+    "hotels": {
+      "budget": ["Sweetwaters Tented Camp Budget Units"],
+      "midrange": ["Sweetwaters Serena Camp"],
+      "luxury": ["The Stables at Ol Pejeta", "Kicheche Laikipia Camp"]
+    },
+    "activities": ["Big Five game drives", "Chimpanzee sanctuary visits", "Night drives", "Conservation tours"],
+    "summary": "Ol Pejeta is a leading conservancy destination known for conservation tourism and premium safari experiences.",
+    "source_url": "https://www.olpejetaconservancy.org/"
+  },
+  {
+    "destination": "Mount Elgon",
+    "region": "Bungoma County",
+    "best_months": ["January", "February", "June", "July", "August", "September"],
+    "best_time": "Morning for cave and trail hikes with clear mountain weather.",
+    "hotels": {
+      "budget": ["Mount Elgon Guest House"],
+      "midrange": ["Mount Elgon Lodge"],
+      "luxury": ["Sipi and Elgon Highlands Retreat (regional)"]
+    },
+    "activities": ["Mountain hiking", "Cave exploration", "Bird watching", "Nature walks"],
+    "summary": "Mount Elgon is ideal for hikers and nature lovers seeking cool highland landscapes in western Kenya.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/mount-elgon-national-park"
+  },
+  {
+    "destination": "Hells Gate",
+    "region": "Nakuru County",
+    "best_months": ["June", "July", "August", "September", "January", "February"],
+    "best_time": "Morning for cycling and gorge hikes before midday heat.",
+    "hotels": {
+      "budget": ["Naivasha Kongoni Lodge Budget Rooms"],
+      "midrange": ["Lake Naivasha Resort", "Sawela Lodges"],
+      "luxury": ["Enashipai Resort and Spa", "Chui Lodge"]
+    },
+    "activities": ["Cycling", "Rock climbing", "Gorge walking", "Geothermal spa visits"],
+    "summary": "Hells Gate is a top adventure destination for cycling, hiking, and dramatic volcanic landscapes.",
+    "source_url": "https://www.kws.go.ke/parks-reserves/hells-gate-national-park"
+  }
+]

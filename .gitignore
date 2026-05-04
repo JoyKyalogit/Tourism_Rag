@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+vectorstore/kenya_faiss/
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local

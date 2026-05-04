@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: safiri-kenya-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python scripts/ingest.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+
+  - type: web
+    name: safiri-kenya-web
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start -- -p $PORT
+    autoDeploy: true
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE_URL
+        sync: false
