@@ -2,6 +2,7 @@ services:
   - type: web
     name: safiri-kenya-api
     runtime: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt && python scripts/ingest.py
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
@@ -10,6 +11,7 @@ services:
   - type: web
     name: safiri-kenya-web
     runtime: node
+    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     startCommand: npm run start -- -p $PORT
