@@ -5,3 +5,9 @@ langchain-community
 faiss-cpu
 sentence-transformers
 pydantic
+requests
+beautifulsoup4
+pandas
+python-multipart
+groq
+python-dotenv

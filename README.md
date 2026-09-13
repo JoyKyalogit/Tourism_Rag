@@ -1,164 +1,212 @@
-# Safiri Kenya - Tourism RAG Assistant
+# Travel Africa — Hotel Discovery & Trip Planning RAG
 
-Safiri Kenya is a tourism recommendation app that answers travel questions about Kenya using a Retrieval-Augmented Generation (RAG) workflow.
+East Africa travel assistant covering **Kenya, Tanzania, Uganda, and Rwanda**. Users ask in natural language; the app retrieves hotels and destinations from a local FAISS index and returns recommendations or a day-by-day itinerary.
 
-It combines:
-- a curated tourism dataset,
-- vector search for relevant context,
-- and a lightweight UI for asking natural language questions.
+No Booking.com / Tripadvisor scraping — only public OSM data and curated tourism sources.
 
-  ## Live Demo
-  https://safiri-kenya-web.onrender.com
+## Live Demo
+https://safiri-kenya-web.onrender.com
 
-## What the App Does
+---
 
-Safiri Kenya helps users ask questions like:
-- "Best beaches to visit in Kenya"
-- "Best activities to do in Diani Beach"
-- "Best places to visit in Kenya in July"
-- "Best hotels in Maasai Mara"
+## Stack (what each tool does)
 
-The app returns focused answers that can include:
-- destination recommendations,
-- activities,
-- best visiting months/time,
-- hotel options by budget tier,
-- and destination locations (county/region style labels).
+| Tool | Role in this project |
+|------|----------------------|
+| **OpenStreetMap + Overpass API** | Source of hotel POIs (`tourism=hotel\|resort\|…`) by bounding box |
+| **Requests** | HTTP client for Overpass queries (`collect_hotels_osm.py`) |
+| **Pandas** | Dedupe/normalize raw hotel JSON → `hotels.json` |
+| **Curated JSON** | Destination guides + seed hotels with tourism-board / brand `source_url`s |
+| **sentence-transformers** (`all-MiniLM-L6-v2`) | Local embeddings of hotel + destination text |
+| **FAISS + LangChain** | Vector store + retrieval for RAG |
+| **Groq (optional)** | Free-tier LLM that rewrites grounded answers for clearer wording |
+| **FastAPI + Uvicorn + Pydantic** | REST API: ask, itinerary, hotels, scrape, reindex |
+| **React + Vite + Tailwind + Axios** | UI; search, destinations, trip plans |
+| **Leaflet** | Map markers for destinations |
+| **Render** | Optional cloud deploy (`render.yaml`) |
 
-## How It Works
+---
 
-1. User asks a question in the Next.js frontend.
-2. Frontend sends the query to the FastAPI backend (`POST /api/ask`).
-3. Backend retrieves relevant destination documents from FAISS.
-4. Retrieved results are re-ranked with query-intent logic (beach, hotel, time, activity, destination, region).
-5. A concise answer is composed from structured fields in the retrieved documents.
+## Where the data comes from
 
-## How This Project Was Created
+### 1. Hotels — scraped from OpenStreetMap
 
-This project was built in layers:
+| Item | Detail |
+|------|--------|
+| **API** | [Overpass API](https://overpass-api.de/api/interpreter) |
+| **Script** | `backend/scripts/collect_hotels_osm.py` |
+| **What** | OSM nodes/ways tagged `tourism` ∈ hotel, guest_house, hostel, motel, resort |
+| **Where** | Bounding boxes: Nairobi, Mombasa, Diani, Watamu, Malindi, Lamu, Naivasha, Nakuru, Kisumu, Nanyuki, Narok, Amboseli, Maasai Mara, Zanzibar, Arusha, Dar es Salaam, Kampala, Entebbe |
+| **Provenance** | Each row gets `source_url` like `https://www.openstreetmap.org/node/<id>` |
+| **Ethics** | Rate-limited (`REQUEST_DELAY_SEC` ≈ 2.5s), custom User-Agent, public data only |
 
-1. **Knowledge curation**
-   - Tourism data was prepared in JSON format (`data/processed/kenya_tourism_data.json`).
-   - Each record includes destination, region, best months/time, hotels, activities, summary, and source URL.
+Raw output → `data/raw/hotels_osm_raw.json`.
 
-2. **Indexing pipeline**
-   - Records are converted into documents and embedded using `sentence-transformers/all-MiniLM-L6-v2`.
-   - Embeddings are stored in a local FAISS vector index.
-   - Index build script: `backend/scripts/ingest.py`.
+### 2. Hotels — curated seed (fallback / enrichment)
 
-3. **Backend API**
-   - FastAPI exposes `/api/ask`, `/api/reindex`, and `/health`.
-   - RAG and ranking logic lives in `backend/app/rag_service.py`.
-   - API entrypoint: `backend/app/main.py`.
+| Item | Detail |
+|------|--------|
+| **Script** | `backend/scripts/seed_hotels.py` |
+| **From destinations** | Budget / midrange / luxury names listed under each place in `destinations.json` (Kenya guides) |
+| **Extras** | Named East Africa hotels (e.g. Park Hyatt Zanzibar, Serena Kampala) with official brand URLs |
+| **When** | OSM down, sparse areas, or to enrich processed hotels |
 
-4. **Frontend UI**
-   - Built with Next.js (App Router + TypeScript).
-   - Provides a simple question box, Enter-to-submit behavior, and styled response display.
-   - Frontend calls backend using `NEXT_PUBLIC_API_BASE_URL`.
+### 3. Destinations — curated (not scraped)
 
-5. **Deployment setup**
-   - `render.yaml` defines both backend and frontend services for Render.
-   - Both services are configured for free plan deployment.
+| File | Content | Typical `source_url` |
+|------|---------|----------------------|
+| `data/processed/destinations.json` | Kenya parks, beaches, cities (summary, activities, best months, hotel tiers) | Magical Kenya, KWS, etc. |
+| `data/processed/ea_destinations.json` | Tanzania / Uganda / Rwanda (Serengeti, Zanzibar, Kigali, Volcanoes NP, …) | Tanzania Tourism, Visit Rwanda, Uganda Wildlife |
 
-## Tech Stack
+Frontend catalog mirrors these in `frontend/src/data/`.
 
-- **Frontend:** Next.js, React, TypeScript
-- **Backend:** FastAPI, Pydantic
-- **RAG/Vector:** LangChain Community, FAISS
-- **Embeddings:** sentence-transformers (`all-MiniLM-L6-v2`)
-- **Hosting:** Render (Blueprint via `render.yaml`)
+---
 
-## Project Structure
+## End-to-end data & request flow
 
-```text
-Tourism_Rag/
-  backend/
-    app/
-      main.py
-      rag_service.py
-    scripts/
-      ingest.py
-    requirements.txt
-  frontend/
-    app/
-      globals.css
-      layout.tsx
-      page.tsx
-    .env.local.example
-    package.json
-  data/
-    processed/
-      kenya_tourism_data.json
-  render.yaml
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  DATA PIPELINE (offline / once)                                 │
+│                                                                 │
+│  Overpass (OSM) ──► hotels_osm_raw.json                         │
+│       │                                                         │
+│       ▼  Pandas clean (require name + source_url, dedupe)       │
+│  destinations.json ──┐                                          │
+│  seed_hotels.py ─────┼──► hotels.json                           │
+│  ea_destinations.json┘                                          │
+│       │                                                         │
+│       ▼  ingest.py (MiniLM embeddings)                          │
+│  vectorstore/ea_travel_faiss/   (hotels + destinations)         │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  RUNTIME                                                        │
+│                                                                 │
+│  Browser (Vite :3000) ──Axios──► FastAPI (:8000)                │
+│       │                              │                          │
+│       │                    TravelAfricaRAG                      │
+│       │                    FAISS similarity search              │
+│       │                    intent / country / trip routing        │
+│       │                              │                          │
+│       ◄──── answer, hotels, destinations, itinerary ────────────┘
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## Run Locally
+### Pipeline steps (in order)
 
-### 1) Backend (FastAPI)
+1. **`collect_hotels_osm.py`** — Overpass POST per region → tags → hotel records → `data/raw/hotels_osm_raw.json`
+2. **`seed_hotels.py`** (optional) — merge destination hotel names + EA extras into `hotels.json`
+3. **`clean_hotels.py`** — Pandas: drop nameless / sourceless rows, normalize `price_range`, dedupe `(name, location, country)` → `data/processed/hotels.json`
+4. **`ingest.py`** — load hotels + Kenya + EA destinations → embed → save FAISS at `vectorstore/ea_travel_faiss/`
 
-```bash
+### Runtime (user question)
+
+1. UI detects intent (`queryIntent.js`): plain ask vs trip/itinerary (“plan”, “3 day”, typos like “Dlani”).
+2. `POST /api/ask` or `POST /api/itinerary` → `TravelAfricaRAG` embeds the query, retrieves top docs from FAISS.
+3. Rerank by destination / country / hotel intent; build a short answer (or day-by-day plan).
+4. Response includes `answer`, `hotels` (with OSM/brand `source_url`), `destinations`, and optionally `itinerary`.
+
+---
+
+## Project layout
+
+```
+Tourism_Rag/
+├── backend/
+│   ├── app/main.py          # FastAPI routes
+│   ├── app/rag_service.py   # FAISS RAG, answers, itineraries
+│   ├── app/hotels.py        # Load/filter hotels
+│   ├── app/config.py        # Paths, Overpass URL, embed model
+│   └── scripts/             # collect → seed → clean → ingest
+├── data/
+│   ├── raw/hotels_osm_raw.json
+│   └── processed/           # hotels.json, destinations.json, ea_destinations.json
+├── vectorstore/ea_travel_faiss/
+├── frontend/src/            # React UI
+└── render.yaml              # Deploy blueprints
+```
+
+---
+
+## Run locally
+
+**Backend** (API → http://localhost:8000)
+
+```powershell
 cd backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python scripts/ingest.py
-uvicorn app.main:app --reload --port 8000
+# First time / refresh data only:
+# python scripts/collect_hotels_osm.py
+# python scripts/seed_hotels.py
+# python scripts/clean_hotels.py
+# python scripts/ingest.py
+python -m uvicorn app.main:app --reload --port 8000
 ```
 
-Health check:
+Optional **Groq** answer polish (clearer wording; facts still come from your filtered data):
 
-```text
-http://localhost:8000/health
-```
+1. Create a free key at [console.groq.com/keys](https://console.groq.com/keys)
+2. In `backend/`, copy `.env.example` → `.env` and set `GROQ_API_KEY=...`
+3. `pip install groq python-dotenv` (or reinstall `requirements.txt`)
+4. Restart uvicorn — `/health` should show `"groq_enabled": true`
 
-### 2) Frontend (Next.js)
+Without a key, the API still works using template answers.
 
-Open a second terminal:
+**Frontend** (UI → http://localhost:3000)
 
-```bash
+```powershell
 cd frontend
-copy .env.local.example .env.local
+copy .env.example .env
 npm install
 npm run dev
 ```
 
-Then open:
+Processed data + FAISS index are usually already in the repo; re-run collect/clean/ingest only when refreshing OSM data.
 
-```text
-http://localhost:3000
+First `/api/ask` after startup can take 30–60s while the embedding model loads.
+
+---
+
+## API (short)
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| GET | `/health` | Liveness + model loaded |
+| POST | `/api/ask` | RAG Q&A |
+| POST | `/api/itinerary` | Multi-day trip plan |
+| GET | `/hotels`, `/hotels/{location}` | Hotel list / filter |
+| POST | `/scrape` | Trigger OSM collect + clean |
+| POST | `/create-embeddings` | Rebuild FAISS |
+
+```json
+POST /api/ask
+{ "query": "Find midrange hotels in Diani" }
 ```
 
-## API Endpoints
+---
 
-- `POST /api/ask`
-  - Body: `{ "query": "Best places to visit in Kenya in July?" }`
-- `POST /api/reindex`
-- `GET /health`
+## Ethics
 
-## Deploy on Render
+- OSM only for scraped hotels; each record keeps an OSM node/way URL.
+- Destinations cite public tourism-board pages (Magical Kenya, Visit Rwanda, etc.).
+- Overpass calls are spaced; no OTA scraping.
+- Seed hotels point at official brand / property pages.
 
-This repo includes a Render Blueprint file: `render.yaml`.
+---
 
-### Steps
+## Deploy
 
-1. Push this repository to GitHub.
-2. In Render, create a new **Blueprint** and select the repo.
-3. Render creates:
-   - `safiri-kenya-api` (backend)
-   - `safiri-kenya-web` (frontend)
-4. Set frontend environment variable:
-   - `NEXT_PUBLIC_API_BASE_URL=https://<your-backend-service>.onrender.com`
-5. Redeploy the frontend service after setting the variable.
+See `render.yaml`. For the frontend production build, set `VITE_API_BASE_URL` to the deployed API URL.
 
-### Verify
+---
 
-- Backend: `https://<your-backend-service>.onrender.com/health`
-- Frontend: `https://<your-frontend-service>.onrender.com`
+## Example questions
 
-## Example Questions
-
-- Best places to visit in Kenya
-- Best beaches to visit in Kenya
-- Best activities to do in Diani Beach
-- Best hotels in Maasai Mara
-- Best time to visit Amboseli
+- Find hotels in Nairobi  
+- Luxury lodges in Maasai Mara  
+- Rwanda / Kigali highlights  
+- Plan a 3-day trip in Diani with activities each day  
+- Best safari parks for families in July  

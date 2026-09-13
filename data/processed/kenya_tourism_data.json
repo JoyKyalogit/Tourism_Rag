@@ -5,9 +5,9 @@
     "best_months": ["July", "August", "September", "October"],
     "best_time": "Early morning and late afternoon for game drives.",
     "hotels": {
-      "budget": ["Mara Explorers Camp"],
-      "midrange": ["Mara Sopa Lodge", "Zebra Plains Mara Camp"],
-      "luxury": ["Mara Serena Safari Lodge", "JW Marriott Masai Mara Lodge"]
+      "budget": ["Mara Explorers Camp", "Enchoro Wildlife Camp", "Oltome Mara Magic Resort"],
+      "midrange": ["Mara Sopa Lodge", "Zebra Plains Mara Camp", "Sentrim Mara Camp", "Basecamp Maasai Mara"],
+      "luxury": ["Mara Serena Safari Lodge", "JW Marriott Masai Mara Lodge", "Governor's Camp", "Angama Mara", "andBeyond Kichwa Tembo Tented Camp"]
     },
     "activities": ["Game drives", "Great Migration viewing", "Hot air balloon safari", "Cultural village visits"],
     "summary": "Maasai Mara is one of Kenya's top safari destinations, famous for big cats and the Great Migration season.",
@@ -19,9 +19,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning for clear Mount Kilimanjaro views and evening for wildlife activity.",
     "hotels": {
-      "budget": ["Nyati Safari Camp"],
-      "midrange": ["Amboseli Sopa Lodge", "Kibo Safari Camp"],
-      "luxury": ["Ol Tukai Lodge", "Tortilis Camp"]
+      "budget": ["Nyati Safari Camp", "Kimana Camp", "AA Lodge Amboseli"],
+      "midrange": ["Amboseli Sopa Lodge", "Kibo Safari Camp", "Sentrim Amboseli Camp", "Tulia Amboseli Safari Camp"],
+      "luxury": ["Ol Tukai Lodge", "Tortilis Camp", "Amboseli Serena Safari Lodge", "Tawi Lodge", "Elewana Tortilis Camp"]
     },
     "activities": ["Elephant viewing", "Photography", "Guided nature walks", "Bird watching"],
     "summary": "Amboseli is known for large elephant herds and iconic views of Mount Kilimanjaro.",
@@ -33,9 +33,9 @@
     "best_months": ["December", "January", "February", "July", "August", "September"],
     "best_time": "Morning beach activities and sunset hours for coastal experiences.",
     "hotels": {
-      "budget": ["Diani Backpackers"],
-      "midrange": ["Baobab Beach Resort", "Papillon Lagoon Reef"],
-      "luxury": ["Swahili Beach Resort", "The Sands at Nomad"]
+      "budget": ["Diani Backpackers", "Diani Sea Resort Bungalows", "Bamboo Guest House"],
+      "midrange": ["Baobab Beach Resort", "Papillon Lagoon Reef", "Leopard Beach Resort", "Neptune Village Beach Resort"],
+      "luxury": ["Swahili Beach Resort", "The Sands at Nomad", "Almanara Luxury Resort", "WaterLovers Beach Resort", "Pinewood Beach Resort and Spa"]
     },
     "activities": ["Beach relaxation", "Snorkeling", "Kite surfing", "Wasini Island day trips"],
     "summary": "Diani Beach offers white sand beaches, warm Indian Ocean waters, and water sports.",
@@ -47,9 +47,9 @@
     "best_months": ["January", "February", "March", "July", "August", "September"],
     "best_time": "Morning for marine activities; evening for beach dining.",
     "hotels": {
-      "budget": ["Mida Creek Eco Camp"],
-      "midrange": ["Turtle Bay Beach Club"],
-      "luxury": ["Hemingways Watamu", "Medina Palms"]
+      "budget": ["Mida Creek Eco Camp", "Watamu Tree House", "Ocean Sports Resort"],
+      "midrange": ["Turtle Bay Beach Club", "Jacaranda Beach Resort", "Ocean Beach Resort and Spa"],
+      "luxury": ["Hemingways Watamu", "Medina Palms", "Tribe Hotel Watamu", "Lonno Lodge"]
     },
     "activities": ["Dolphin watching", "Snorkeling in marine parks", "Deep sea fishing", "Beach leisure"],
     "summary": "Watamu is ideal for marine adventures, coral reefs, and laid-back beach holidays.",
@@ -61,9 +61,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Early morning boat rides and late afternoon for park visits.",
     "hotels": {
-      "budget": ["Fisherman's Camp"],
-      "midrange": ["Lake Naivasha Sopa Resort", "Enashipai Resort and Spa"],
-      "luxury": ["Chui Lodge", "Loldia House"]
+      "budget": ["Fisherman's Camp", "Crayfish Camp", "Kongoni Lodge"],
+      "midrange": ["Lake Naivasha Sopa Resort", "Enashipai Resort and Spa", "Lake Naivasha Country Club", "Sawela Lodges"],
+      "luxury": ["Chui Lodge", "Loldia House", "Great Rift Valley Lodge and Golf Resort", "Mfangano Island Camp"]
     },
     "activities": ["Boat rides on Lake Naivasha", "Hell's Gate cycling", "Crescent Island walks", "Bird watching"],
     "summary": "Naivasha combines lake experiences, adventure activities, and nearby national parks.",
@@ -75,9 +75,9 @@
     "best_months": ["June", "July", "August", "September", "December", "January", "February"],
     "best_time": "Morning for parks and museums; evening for city dining and nightlife.",
     "hotels": {
-      "budget": ["Ibis Styles Nairobi"],
-      "midrange": ["Four Points by Sheraton Nairobi Airport", "Golden Tulip Westlands"],
-      "luxury": ["Hemingways Nairobi", "Villa Rosa Kempinski"]
+      "budget": ["Ibis Styles Nairobi", "Hotel Boulevard", "Meridian Court Hotel"],
+      "midrange": ["Four Points by Sheraton Nairobi Airport", "Golden Tulip Westlands", "Sarova Stanley", "Tribe Hotel Nairobi"],
+      "luxury": ["Hemingways Nairobi", "Villa Rosa Kempinski", "Fairmont The Norfolk", "House of Waine", "Palacina The Residence and Suites"]
     },
     "activities": ["Nairobi National Park", "Giraffe Centre", "Karen Blixen Museum", "City food tours"],
     "summary": "Nairobi is a vibrant urban destination with wildlife, culture, and modern hospitality.",
@@ -89,9 +89,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Game drives in early morning and late afternoon.",
     "hotels": {
-      "budget": ["Voi Wildlife Lodge"],
-      "midrange": ["Ashnil Aruba Lodge", "Voyager Ziwani Camp"],
-      "luxury": ["Finch Hattons Luxury Camp", "Kilaguni Serena Safari Lodge"]
+      "budget": ["Voi Wildlife Lodge", "Severin Safari Camp", "Ngulia Safari Lodge"],
+      "midrange": ["Ashnil Aruba Lodge", "Voyager Ziwani Camp", "Sarova Salt Lick Game Lodge", "Sentrim Tsavo Camp"],
+      "luxury": ["Finch Hattons Luxury Camp", "Kilaguni Serena Safari Lodge", "Galdessa Camp", "Satao Elerai Camp"]
     },
     "activities": ["Game drives", "Lugard Falls visits", "Bird watching", "Photography"],
     "summary": "Tsavo East and West offer expansive wilderness, red elephants, and diverse landscapes.",
@@ -103,9 +103,9 @@
     "best_months": ["January", "February", "June", "July", "August", "September"],
     "best_time": "Morning for outdoor adventures and clear mountain views.",
     "hotels": {
-      "budget": ["Nanyuki Sports Club Guest House"],
-      "midrange": ["Fairmont Mount Kenya Safari Club"],
-      "luxury": ["Segera Retreat", "Ol Pejeta Bush Camp"]
+      "budget": ["Nanyuki Sports Club Guest House", "Batian's View Guest House", "Sportsman's Arms Hotel"],
+      "midrange": ["Fairmont Mount Kenya Safari Club", "Serena Mountain Lodge", "Castle Forest Lodge", "Le Rustique"],
+      "luxury": ["Segera Retreat", "Ol Pejeta Bush Camp", "Porini Rhino Camp", "Sirai House"]
     },
     "activities": ["Mountain trekking", "Conservancy safaris", "Horse riding", "Nature photography"],
     "summary": "Nanyuki and Mount Kenya are best for highland adventure, luxury stays, and conservancy experiences.",
@@ -117,9 +117,9 @@
     "best_months": ["December", "January", "February", "July", "August", "September"],
     "best_time": "Morning for Old Town tours and late afternoon for beach and sunset experiences.",
     "hotels": {
-      "budget": ["Tulip Cottages", "New Palm Tree Hotel"],
-      "midrange": ["CityBlue Creekside Hotel", "PrideInn Hotel Mombasa"],
-      "luxury": ["Serena Beach Resort and Spa", "Sarova Whitesands Beach Resort"]
+      "budget": ["Tulip Cottages", "New Palm Tree Hotel", "Bahari Beach Hotel"],
+      "midrange": ["CityBlue Creekside Hotel", "PrideInn Hotel Mombasa", "Best Western Plus Creekside", "Travellers Beach Hotel"],
+      "luxury": ["Serena Beach Resort and Spa", "Sarova Whitesands Beach Resort", "Voyager Beach Resort", "English Point Marina"]
     },
     "activities": ["Fort Jesus tours", "Old Town walks", "Beach relaxation", "Swahili food experiences"],
     "summary": "Mombasa blends coastal beaches, Swahili heritage, and historical attractions for culture and leisure travelers.",
@@ -131,9 +131,9 @@
     "best_months": ["January", "February", "July", "August", "September", "October"],
     "best_time": "Morning for dhow excursions and evenings for sunset and cultural events.",
     "hotels": {
-      "budget": ["Jua House", "Subira House"],
-      "midrange": ["Lamu House Hotel", "The Majlis Annex"],
-      "luxury": ["Peponi Hotel", "The Majlis Resort"]
+      "budget": ["Jua House", "Subira House", "Lamu House Backpackers"],
+      "midrange": ["Lamu House Hotel", "The Majlis Annex", "Banana House and Wellness Centre", "Kijani Hotel"],
+      "luxury": ["Peponi Hotel", "The Majlis Resort", "Manda Bay", "Kizingo"]
     },
     "activities": ["Dhow sailing", "Lamu Old Town heritage tours", "Beach time at Shela", "Swahili cuisine experiences"],
     "summary": "Lamu offers a unique island experience with rich Swahili culture, car-free streets, and serene beaches.",
@@ -145,9 +145,9 @@
     "best_months": ["January", "February", "March", "July", "August", "September"],
     "best_time": "Early morning for marine park trips and late afternoon for beach activities.",
     "hotels": {
-      "budget": ["Marine Holiday House", "Travellers Inn Resort"],
-      "midrange": ["Ocean Beach Resort and Spa", "Kilili Baharini Resort"],
-      "luxury": ["Diamonds Dream of Africa", "Billionaire Resort and Retreat"]
+      "budget": ["Marine Holiday House", "Travellers Inn Resort", "Driftwood Beach Club"],
+      "midrange": ["Ocean Beach Resort and Spa", "Kilili Baharini Resort", "White Elephant Sea Lodge", "Sandies Tropical Village"],
+      "luxury": ["Diamonds Dream of Africa", "Billionaire Resort and Retreat", "Che Shale", "Lion in the Sun"]
     },
     "activities": ["Marine park snorkeling", "Deep sea fishing", "Beach walks", "Falconry and cultural tours"],
     "summary": "Malindi is a coastal destination known for marine parks, beaches, and a mix of Kenyan and Italian influences.",
@@ -159,9 +159,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Game drives in early morning and late afternoon around riverine areas.",
     "hotels": {
-      "budget": ["Samburu Riverside Camp"],
-      "midrange": ["Samburu Sopa Lodge", "Ashnil Samburu Camp"],
-      "luxury": ["Saruni Samburu", "Elephant Bedroom Camp"]
+      "budget": ["Samburu Riverside Camp", "Sasaab Samburu Budget Camp", "Umoja Women's Camp"],
+      "midrange": ["Samburu Sopa Lodge", "Ashnil Samburu Camp", "Samburu Intrepids Camp", "Elephant Watch Camp"],
+      "luxury": ["Saruni Samburu", "Elephant Bedroom Camp", "Sasaab Lodge", "Larsens Camp"]
     },
     "activities": ["Game drives", "Bird watching", "Samburu cultural visits", "Photography"],
     "summary": "Samburu is famous for rare northern species, striking landscapes, and authentic cultural experiences.",
@@ -173,9 +173,9 @@
     "best_months": ["June", "July", "August", "September", "December", "January", "February"],
     "best_time": "Morning and evening game drives for wildlife activity and cooler weather.",
     "hotels": {
-      "budget": ["Ikweta Safari Camp"],
-      "midrange": ["Elsa's Kopje Lite Camp"],
-      "luxury": ["Elsa's Kopje", "Rhino River Camp"]
+      "budget": ["Ikweta Safari Camp", "Murera Springs Eco Lodge", "Kinna Guest House"],
+      "midrange": ["Elsa's Kopje Lite Camp", "Offbeat Meru Camp", "Leopard Rock Lodge"],
+      "luxury": ["Elsa's Kopje", "Rhino River Camp", "Hemingways Ol Seki Mara", "Serian The Original"]
     },
     "activities": ["Game drives", "Rhino sanctuary visits", "Riverine nature walks", "Bird watching"],
     "summary": "Meru National Park offers wild, less-crowded safari experiences with rivers, diverse wildlife, and rich conservation history.",
@@ -187,9 +187,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning for wildlife viewing and afternoon for scenic viewpoints.",
     "hotels": {
-      "budget": ["Sleepway Cottages", "Hotel Waterbuck"],
-      "midrange": ["Lake Nakuru Sopa Lodge", "Sarova Lion Hill Game Lodge"],
-      "luxury": ["The Cliff Nakuru", "Mbweha Camp"]
+      "budget": ["Sleepway Cottages", "Hotel Waterbuck", "Merica Hotel"],
+      "midrange": ["Lake Nakuru Sopa Lodge", "Sarova Lion Hill Game Lodge", "Flamingo Hill Camp", "Lake Nakuru Lodge"],
+      "luxury": ["The Cliff Nakuru", "Mbweha Camp", "Lake Elementaita Serena Camp", "Sarova Woodlands Hotel"]
     },
     "activities": ["Lake Nakuru game drives", "Bird watching", "Baboon Cliff viewpoints", "Nature photography"],
     "summary": "Nakuru is popular for lake and park tourism, with rhino sightings, birdlife, and dramatic escarpment scenery.",
@@ -201,9 +201,9 @@
     "best_months": ["January", "February", "June", "July", "August", "September"],
     "best_time": "Morning for moorland drives and evenings for lodge-based wildlife viewing.",
     "hotels": {
-      "budget": ["Tusk Camp"],
-      "midrange": ["Aberdare Country Club", "The Ark Lodge"],
-      "luxury": ["Treetops Lodge", "The Aberdare Cottages and Fishing Lodge"]
+      "budget": ["Tusk Camp", "Aberdare Cottages Budget Rooms", "Outspan Hotel"],
+      "midrange": ["Aberdare Country Club", "The Ark Lodge", "Treetops Lodge", "Serena Mountain Lodge"],
+      "luxury": ["Treetops Lodge", "The Aberdare Cottages and Fishing Lodge", "Giraffe Ark Game Lodge", "Aberdare Forest Lodge"]
     },
     "activities": ["Forest hikes", "Waterfall visits", "Wildlife viewing", "Trout fishing"],
     "summary": "Aberdare is ideal for cool highland escapes, mountain forests, waterfalls, and lodge-based nature experiences.",
@@ -215,9 +215,9 @@
     "best_months": ["June", "July", "August", "December", "January", "February"],
     "best_time": "Morning for lakefront activities and evening for city dining.",
     "hotels": {
-      "budget": ["Vittoria Suites", "Imperial Express"],
-      "midrange": ["Acacia Premier Hotel", "Sovereign Hotel"],
-      "luxury": ["Ciala Resort", "Grand Royal Swiss Hotel"]
+      "budget": ["Vittoria Suites", "Imperial Express", "Kisumu Hotel"],
+      "midrange": ["Acacia Premier Hotel", "Sovereign Hotel", "Regency Kisumu", "Ciala Resort"],
+      "luxury": ["Ciala Resort", "Grand Royal Swiss Hotel", "Enashipai Resort Kisumu", "Victoria Comfort Inn"]
     },
     "activities": ["Lake Victoria sunsets", "Impala Sanctuary visits", "Dunga Hill Camp experiences", "Cultural tours"],
     "summary": "Kisumu combines lakeside relaxation, western Kenya culture, and growing urban hospitality options.",
@@ -229,9 +229,9 @@
     "best_months": ["January", "February", "June", "July", "August", "September"],
     "best_time": "Morning for birding and nature walks before afternoon showers.",
     "hotels": {
-      "budget": ["Rondo Retreat Centre"],
-      "midrange": ["Golf Hotel Kakamega", "Sheywe Guest House"],
-      "luxury": ["Kakamega Forest Lodge"]
+      "budget": ["Rondo Retreat Centre", "Sheywe Guest House", "Kakamega Forest Station Guest House"],
+      "midrange": ["Golf Hotel Kakamega", "Sheywe Guest House", "Isukuti Guest House", "Western Star Hotel"],
+      "luxury": ["Kakamega Forest Lodge", "Rondo Retreat Centre Deluxe", "Saiwa Swamp Eco Lodge"]
     },
     "activities": ["Forest hiking", "Bird watching", "Butterfly spotting", "Cultural village visits"],
     "summary": "Kakamega Forest is Kenya's iconic rainforest destination for biodiversity, birding, and eco-tourism.",
@@ -243,9 +243,9 @@
     "best_months": ["June", "July", "August", "September", "December", "January", "February"],
     "best_time": "Early mornings and late afternoons due to hot daytime temperatures.",
     "hotels": {
-      "budget": ["Eliye Springs Camp"],
-      "midrange": ["Stegron Camp and Resort"],
-      "luxury": ["Desert Rose Lodge"]
+      "budget": ["Eliye Springs Camp", "Lobolo Camp", "Turkana Campsite"],
+      "midrange": ["Stegron Camp and Resort", "Palm Shade Camp", "Central Island Camp"],
+      "luxury": ["Desert Rose Lodge", "Lobolo Camp Luxury Tents", "Silale Lodge"]
     },
     "activities": ["Lake excursions", "Desert landscape photography", "Cultural encounters", "Archaeological site visits"],
     "summary": "Lake Turkana offers dramatic desert-lake scenery, unique cultures, and frontier adventure tourism.",
@@ -257,9 +257,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning for crater-lake views and wildlife tracking.",
     "hotels": {
-      "budget": ["Jirime Hotel Marsabit"],
-      "midrange": ["Nomads Trail Hotel"],
-      "luxury": ["Sarova Shaba (nearby northern circuit)"]
+      "budget": ["Jirime Hotel Marsabit", "Marsabit Lodge Budget Rooms", "Chalbi Desert Camp"],
+      "midrange": ["Nomads Trail Hotel", "Marsabit Lodge", "Lake Paradise Camp"],
+      "luxury": ["Sarova Shaba Game Lodge", "Desert Rose Lodge", "Grevy's Zebra Trust Camp"]
     },
     "activities": ["Marsabit National Park visits", "Crater lake viewpoints", "Cultural tourism", "Camel safaris"],
     "summary": "Marsabit is a northern Kenya adventure destination with volcanic landscapes, wildlife, and rich cultural heritage.",
@@ -271,9 +271,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning and evening for game drives and riverine wildlife.",
     "hotels": {
-      "budget": ["Shaba Game Lodge Campsite"],
-      "midrange": ["Shaba Game Lodge", "Samburu Intrepids Camp"],
-      "luxury": ["Sarova Shaba Game Lodge", "Elephant Bedroom Camp"]
+      "budget": ["Shaba Game Lodge Campsite", "Isiolo Guest House", "Buffalo Springs Campsite"],
+      "midrange": ["Shaba Game Lodge", "Samburu Intrepids Camp", "Ashnil Samburu Camp", "Joy's Camp"],
+      "luxury": ["Sarova Shaba Game Lodge", "Elephant Bedroom Camp", "Sasaab Lodge", "Saruni Samburu"]
     },
     "activities": ["Game drives", "Bird watching", "Ewaso Nyiro river excursions", "Cultural visits"],
     "summary": "Isiolo and Shaba form part of Kenya's northern safari circuit with unique wildlife and dramatic arid landscapes.",
@@ -285,9 +285,9 @@
     "best_months": ["June", "July", "August", "September", "December", "January", "February"],
     "best_time": "Morning for hiking and horse riding with clear hill and Kilimanjaro views.",
     "hotels": {
-      "budget": ["Kibwezi Guest Camps"],
-      "midrange": ["Campi ya Kanzi"],
-      "luxury": ["Ol Donyo Lodge"]
+      "budget": ["Kibwezi Guest Camps", "Chyulu Wilderness Camp", "Emali Guest House"],
+      "midrange": ["Campi ya Kanzi", "Chyulu Wilderness Camp", "Kilima Camp"],
+      "luxury": ["Ol Donyo Lodge", "Campi ya Kanzi Luxury Suites", "Finch Hattons Luxury Camp"]
     },
     "activities": ["Hiking", "Horseback safaris", "Cave exploration", "Scenic photography"],
     "summary": "Chyulu Hills offers scenic green hills, wilderness experiences, and premium eco-lodges in southern Kenya.",
@@ -299,9 +299,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Early morning and evening for game drives and viewpoints.",
     "hotels": {
-      "budget": ["Salt Lick Safari Lodge Campsite"],
-      "midrange": ["Taita Hills Safari Resort and Spa"],
-      "luxury": ["Salt Lick Safari Lodge"]
+      "budget": ["Salt Lick Safari Lodge Campsite", "Voi Wildlife Lodge", "Taita Hills Campsite"],
+      "midrange": ["Taita Hills Safari Resort and Spa", "Sarova Salt Lick Game Lodge", "Voi Wildlife Lodge"],
+      "luxury": ["Salt Lick Safari Lodge", "Taita Hills Safari Resort Presidential Suite", "Finch Hattons Luxury Camp"]
     },
     "activities": ["Game drives", "Bird watching", "Scenic hill viewpoints", "Photography"],
     "summary": "Taita Hills provides classic safari experiences with iconic lodges and easy access from the coast and Nairobi.",
@@ -313,9 +313,9 @@
     "best_months": ["June", "July", "August", "September", "December", "January", "February"],
     "best_time": "Early morning and late afternoon for active wildlife sightings.",
     "hotels": {
-      "budget": ["Tamarind Tree Hotel"],
-      "midrange": ["Eka Hotel Nairobi", "Ole Sereni Hotel"],
-      "luxury": ["Hemingways Nairobi", "Radisson Blu Hotel Nairobi Upper Hill"]
+      "budget": ["Tamarind Tree Hotel", "Hotel Boulevard", "Meridian Court Hotel"],
+      "midrange": ["Eka Hotel Nairobi", "Ole Sereni Hotel", "Emara Ole Sereni", "Nairobi Serena Hotel"],
+      "luxury": ["Hemingways Nairobi", "Radisson Blu Hotel Nairobi Upper Hill", "Villa Rosa Kempinski", "House of Waine"]
     },
     "activities": ["Game drives", "Rhino sightings", "Safari walks nearby", "Photography with city skyline backdrop"],
     "summary": "Nairobi National Park offers unique city-meets-safari experiences minutes from Kenya's capital.",
@@ -327,9 +327,9 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning and evening for wildlife drives and conservation activities.",
     "hotels": {
-      "budget": ["Sweetwaters Tented Camp Budget Units"],
-      "midrange": ["Sweetwaters Serena Camp"],
-      "luxury": ["The Stables at Ol Pejeta", "Kicheche Laikipia Camp"]
+      "budget": ["Sweetwaters Tented Camp Budget Units", "Porini Rhino Camp", "Ol Pejeta House Budget Rooms"],
+      "midrange": ["Sweetwaters Serena Camp", "Porini Rhino Camp", "Ol Pejeta Bush Camp"],
+      "luxury": ["The Stables at Ol Pejeta", "Kicheche Laikipia Camp", "Ol Pejeta Safari Cottages", "Porini Rhino Camp Luxury"]
     },
     "activities": ["Big Five game drives", "Chimpanzee sanctuary visits", "Night drives", "Conservation tours"],
     "summary": "Ol Pejeta is a leading conservancy destination known for conservation tourism and premium safari experiences.",
@@ -341,9 +341,9 @@
     "best_months": ["January", "February", "June", "July", "August", "September"],
     "best_time": "Morning for cave and trail hikes with clear mountain weather.",
     "hotels": {
-      "budget": ["Mount Elgon Guest House"],
-      "midrange": ["Mount Elgon Lodge"],
-      "luxury": ["Sipi and Elgon Highlands Retreat (regional)"]
+      "budget": ["Mount Elgon Guest House", "Sipi Falls Campsite", "Kapchorua Guest House"],
+      "midrange": ["Mount Elgon Lodge", "Sipi River Lodge", "Noah's Ark Hotel"],
+      "luxury": ["Sipi and Elgon Highlands Retreat", "Sipi River Lodge Luxury Cottages", "Mount Elgon Hotel and Spa"]
     },
     "activities": ["Mountain hiking", "Cave exploration", "Bird watching", "Nature walks"],
     "summary": "Mount Elgon is ideal for hikers and nature lovers seeking cool highland landscapes in western Kenya.",
@@ -355,12 +355,138 @@
     "best_months": ["June", "July", "August", "September", "January", "February"],
     "best_time": "Morning for cycling and gorge hikes before midday heat.",
     "hotels": {
-      "budget": ["Naivasha Kongoni Lodge Budget Rooms"],
-      "midrange": ["Lake Naivasha Resort", "Sawela Lodges"],
-      "luxury": ["Enashipai Resort and Spa", "Chui Lodge"]
+      "budget": ["Naivasha Kongoni Lodge Budget Rooms", "Fisherman's Camp", "Crayfish Camp"],
+      "midrange": ["Lake Naivasha Resort", "Sawela Lodges", "Lake Naivasha Country Club", "Camp Carnelley's"],
+      "luxury": ["Enashipai Resort and Spa", "Chui Lodge", "Loldia House", "Great Rift Valley Lodge and Golf Resort"]
     },
     "activities": ["Cycling", "Rock climbing", "Gorge walking", "Geothermal spa visits"],
     "summary": "Hells Gate is a top adventure destination for cycling, hiking, and dramatic volcanic landscapes.",
     "source_url": "https://www.kws.go.ke/parks-reserves/hells-gate-national-park"
+  },
+  {
+    "destination": "Eldoret",
+    "region": "Uasin Gishu County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for city tours and athletics venues; afternoon for Rift Valley viewpoints.",
+    "hotels": {
+      "budget": ["Eldoret Wagon Hotel", "Poa Inn Eldoret", "Sirikwa Hotel"],
+      "midrange": ["Boma Inn Eldoret", "Naiberi River Campsite and Resort", "Sirikwa Hotel"],
+      "luxury": ["Rivatex Western Hotel", "Boma Inn Eldoret Executive", "Naiberi River Campsite Luxury Tents"]
+    },
+    "activities": ["Kipchoge Keino Stadium visits", "Rift Valley viewpoints", "Cheese factory tours", "Iten escarpment day trips"],
+    "summary": "Eldoret is Kenya's highland city of champions — a lively Rift Valley hub known for athletics, farming, and cool-climate hospitality.",
+    "source_url": "https://www.magicalkenya.com/destinations/eldoret/"
+  },
+  {
+    "destination": "Nyeri",
+    "region": "Nyeri County",
+    "best_months": ["January", "February", "June", "July", "August", "September", "December"],
+    "best_time": "Morning for heritage sites and tea-country drives; evenings for cool highland dining.",
+    "hotels": {
+      "budget": ["Chaka Ranch Camp", "Green Hills Hotel", "Batian Grand Hotel"],
+      "midrange": ["Aberdare Country Club", "Outspan Hotel", "The White Rhino Hotel"],
+      "luxury": ["Treetops Lodge", "The Ark Lodge", "Serena Mountain Lodge"]
+    },
+    "activities": ["Baden Powell grave visits", "Chaka Ranch adventures", "Tea estate tours", "Aberdare gateway excursions"],
+    "summary": "Nyeri is a historic highland town at the foot of the Aberdares — tea country, colonial heritage, and a gateway to Kenya's central parks.",
+    "source_url": "https://www.magicalkenya.com/destinations/nyeri/"
+  },
+  {
+    "destination": "Machakos",
+    "region": "Machakos County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Late afternoon for People's Park sunsets and sculpture garden visits.",
+    "hotels": {
+      "budget": ["Machakos Hotel", "Iveti Forest Lodge Budget Rooms", "Alpine Hotel"],
+      "midrange": ["Maanzoni Lodge", "Kyemtaa Hills Eco Lodge", "Machakos Hotel"],
+      "luxury": ["Ol Donyo Sabuk Lodge", "Kyemtaa Hills Eco Lodge", "Maanzoni Lodge"]
+    },
+    "activities": ["Machakos People's Park", "Kyemtaa Hills hiking", "Masaku 7s rugby culture", "Kituluni Hill gravity point"],
+    "summary": "Machakos is a scenic highland city east of Nairobi — rolling hills, public art, outdoor adventure, and easy weekend escapes.",
+    "source_url": "https://www.magicalkenya.com/destinations/machakos/"
+  },
+  {
+    "destination": "Thika",
+    "region": "Kiambu County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for waterfall visits and pineapple-country drives.",
+    "hotels": {
+      "budget": ["Thika Golden Pearl Hotel", "Almond Resort Thika", "Spikes Hotel"],
+      "midrange": ["Blue Posts Hotel", "Wida Highway Hotel", "Almond Resort Thika"],
+      "luxury": ["Blue Posts Hotel", "Tigoni Highlands Retreat", "Fairview Hotel Thika"]
+    },
+    "activities": ["Chania Falls visits", "Fourteen Falls day trips", "Pineapple farm tours", "Thika Greens golf"],
+    "summary": "Thika is an industrial and agricultural city north of Nairobi — famous for waterfalls, pineapple farms, and Blue Posts heritage hospitality.",
+    "source_url": "https://www.magicalkenya.com/destinations/thika/"
+  },
+  {
+    "destination": "Embu",
+    "region": "Embu County",
+    "best_months": ["January", "February", "June", "July", "August", "September", "December"],
+    "best_time": "Morning for cultural tours and Mount Kenya eastern-slope viewpoints.",
+    "hotels": {
+      "budget": ["Izaak Walton Inn", "Muringa Hotel", "Embu Town Hotel"],
+      "midrange": ["Izaak Walton Inn", "Muringa Hotel", "Kwetu Lodge"],
+      "luxury": ["Izaak Walton Inn", "Mwea Classic Lodge", "Castle Forest Lodge"]
+    },
+    "activities": ["Mount Kenya eastern views", "Mwea cultural tours", "Karue Hill viewpoints", "Coffee and macadamia farm visits"],
+    "summary": "Embu is a vibrant eastern highlands city with rich Meru-Embu culture, farming landscapes, and access to Mount Kenya's eastern slopes.",
+    "source_url": "https://www.magicalkenya.com/destinations/embu/"
+  },
+  {
+    "destination": "Kitale",
+    "region": "Trans-Nzoia County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for Saiwa Swamp and farm tours before afternoon showers.",
+    "hotels": {
+      "budget": ["Cranes Hotel Kitale", "Mid Africa Hotel", "Vision Gate Hotel"],
+      "midrange": ["Cranes Hotel Kitale", "Mid Africa Hotel", "Sirikwa Dairies Guest House"],
+      "luxury": ["Saiwa Swamp National Park Lodge", "Mount Elgon Hotel and Spa", "Cranes Hotel Kitale"]
+    },
+    "activities": ["Saiwa Swamp sitatunga viewing", "Kitale Museum visits", "Mount Elgon gateway trips", "Maize and dairy farm tours"],
+    "summary": "Kitale is western Kenya's breadbasket city — agricultural heartland with museums, Saiwa Swamp wildlife, and Mount Elgon access.",
+    "source_url": "https://www.magicalkenya.com/destinations/kitale/"
+  },
+  {
+    "destination": "Kericho",
+    "region": "Kericho County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Morning for tea-estate drives in clear weather; afternoons for cool highland walks.",
+    "hotels": {
+      "budget": ["Tea Hotel Kericho", "New Somerset Hotel", "Kericho Hotel"],
+      "midrange": ["Tea Hotel Kericho", "Saiyet Hotel", "Green Span Hotel"],
+      "luxury": ["Tea Hotel Kericho", "Saiyet Hotel", "Kericho Tea Hotel Executive"]
+    },
+    "activities": ["Tea plantation tours", "Chagaik Arboretum walks", "Chepseon viewpoints", "Sosiot and Kapkatet hot springs"],
+    "summary": "Kericho is Kenya's tea capital — endless green estates, cool highland air, and scenic drives through the western Rift Valley.",
+    "source_url": "https://www.magicalkenya.com/destinations/kericho/"
+  },
+  {
+    "destination": "Narok",
+    "region": "Narok County",
+    "best_months": ["June", "July", "August", "September", "December", "January", "February"],
+    "best_time": "Early morning departures for Maasai Mara; evenings for town markets and culture.",
+    "hotels": {
+      "budget": ["Narok Hotel", "Keekorok Lodge Town Annex", "Maasai Discovery Lodge"],
+      "midrange": ["Narok Hotel", "Maasai Discovery Lodge", "Mara Frontier Hotel"],
+      "luxury": ["Mara Frontier Hotel", "Maasai Discovery Lodge", "Narok County Resort"]
+    },
+    "activities": ["Maasai Mara gateway planning", "Maasai market visits", "Mau Forest viewpoints", "Cultural village experiences"],
+    "summary": "Narok is the gateway city to the Maasai Mara — a bustling highland town where safari journeys begin and Maasai culture thrives.",
+    "source_url": "https://www.magicalkenya.com/destinations/narok/"
+  },
+  {
+    "destination": "Meru Town",
+    "region": "Meru County",
+    "best_months": ["January", "February", "June", "July", "August", "September", "December"],
+    "best_time": "Morning for town heritage walks; afternoons for Mount Kenya eastern views.",
+    "hotels": {
+      "budget": ["Meru Slopes Hotel", "Three Steers Hotel", "Meru Town Lodge"],
+      "midrange": ["Three Steers Hotel", "Meru Slopes Hotel", "Kinna Guest House"],
+      "luxury": ["Leopard Rock Lodge", "Elsa's Kopje (nearby)", "Meru Slopes Hotel"]
+    },
+    "activities": ["Meru National Park gateway", "Mount Kenya views", "Njuri Ncheke cultural sites", "Miraa and miraa-market culture tours"],
+    "summary": "Meru Town is eastern Kenya's commercial hub — a gateway to Meru National Park with rich Ameru heritage and cool highland charm.",
+    "source_url": "https://www.magicalkenya.com/destinations/meru/"
   }
 ]
