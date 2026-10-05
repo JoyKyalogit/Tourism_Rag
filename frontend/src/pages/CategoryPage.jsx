@@ -8,6 +8,7 @@ import {
   getDestinationsByCategory,
   groupDestinationsByCountry,
 } from "../data/catalog";
+import { handleImageError, thumbUrl } from "../utils/imageUrl";
 
 const VIBE_BY_TYPE = {
   Beach: ["romantic", "sunset", "slow travel"],
@@ -33,8 +34,11 @@ function PlaceCard({ place }) {
     >
       <div className="relative h-44 overflow-hidden">
         <img
-          src={place.image}
+          src={thumbUrl(place.image)}
           alt={place.name}
+          loading="lazy"
+          decoding="async"
+          onError={handleImageError(place.image)}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />

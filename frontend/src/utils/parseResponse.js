@@ -19,11 +19,6 @@ export function googleMapsUrl(name) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, Kenya`)}`;
 }
 
-export function wikipediaUrl(name) {
-  const title = name.trim().replace(/\s+/g, "_");
-  return `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`;
-}
-
 export function normalizeDestination(raw) {
   const name = raw.name || raw.destination || "Unknown";
   const normalized = {

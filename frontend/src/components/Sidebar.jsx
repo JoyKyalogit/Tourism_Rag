@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function CompassIcon({ className }) {
   return (
@@ -27,13 +27,16 @@ function HeartIcon({ className }) {
 
 const NAV_ITEMS = [
   { id: "explore", label: "Explore", icon: CompassIcon, to: "/" },
-  { id: "itineraries", label: "Itineraries", icon: MapIcon, to: "/" },
+  { id: "itineraries", label: "Itineraries", icon: MapIcon, to: "/?tab=itineraries" },
   { id: "favorites", label: "Favorites", icon: HeartIcon, to: "/" },
 ];
 
-export default function Sidebar({ onPlanTrip, activeNav = "explore", onNavChange }) {
+export default function Sidebar({ onPlanTrip }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const onHome = location.pathname === "/";
+  const activeNav =
+    new URLSearchParams(location.search).get("tab") === "itineraries" ? "itineraries" : "explore";
 
   return (
     <aside className="hidden w-52 shrink-0 flex-col border-r border-white/30 bg-white/55 px-4 py-6 text-slate-800 backdrop-blur-md lg:flex">
@@ -54,7 +57,6 @@ export default function Sidebar({ onPlanTrip, activeNav = "explore", onNavChange
             <Link
               key={id}
               to={to}
-              onClick={() => onNavChange?.(id)}
               className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition ${
                 active
                   ? "bg-emerald-100/80 text-emerald-900"
@@ -71,7 +73,7 @@ export default function Sidebar({ onPlanTrip, activeNav = "explore", onNavChange
       <div className="mt-auto pt-8">
         <button
           type="button"
-          onClick={onPlanTrip}
+          onClick={onPlanTrip ?? (() => navigate("/?tab=itineraries"))}
           className="btn-gradient w-full rounded-xl py-2.5 text-sm font-semibold text-white"
         >
           Plan My Trip

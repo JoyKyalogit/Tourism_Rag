@@ -176,47 +176,72 @@ DESTINATION_META: dict[str, dict[str, Any]] = {
     "kigali": {
         "lat": -1.9441,
         "lng": 30.0619,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Kigali_City.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/An_aerial_of_Kigali_Convention_Center_on_June_19%2C_2019._Photo_by_Emmanuel_Kwizera.jpg",
     },
     "volcanoes national park": {
         "lat": -1.4427,
         "lng": 29.538,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Virunga_Mountains.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Mount_Mikeno_%28DR_Congo%29_and_Mount_Karisimbi_%28Rwanda%29%2C_two_extinct_volcanoes_in_the_Virunga_mountain_range._%2819556231290%29.jpg",
     },
     "serengeti": {
         "lat": -2.3333,
         "lng": 34.8333,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Serengeti_Landscape_2012_01.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Serengeti_National_Park_15_-_landscape.jpg",
     },
     "zanzibar": {
         "lat": -6.1659,
         "lng": 39.2026,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Nungwi_beach_Zanzibar.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/White_sandy_beach_at_Nungwi%2C_Zanzibar.jpg",
+    },
+    "pemba island": {
+        "lat": -5.0319,
+        "lng": 39.7756,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Vumawimbi_Beach%2C_Pemba_Island.jpg",
+    },
+    "tarangire national park": {
+        "lat": -3.8333,
+        "lng": 36.0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Elephants_in_Tarangire_National_Park_%282015%29.jpg",
+    },
+    "queen elizabeth national park": {
+        "lat": -0.2,
+        "lng": 30.0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/048_Lioness_during_golden_hour_of_the_morning_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+    },
+    "dar es salaam": {
+        "lat": -6.7924,
+        "lng": 39.2083,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Dar_es_Salaam_before_dusk.jpg",
+    },
+    "lake victoria": {
+        "lat": -0.5,
+        "lng": 33.0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Scene_in_Fishing_Village_along_Shore_of_Lake_Victoria_-_Entebbe_-_Uganda.jpg",
     },
     "kampala": {
         "lat": 0.3476,
         "lng": 32.5825,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kampala_Skyline.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kampala_skyline.jpg",
     },
     "arusha": {
         "lat": -3.3869,
         "lng": 36.683,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Arusha_city_view.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Arusha_City_view.jpg",
     },
     "bwindi impenetrable forest": {
         "lat": -1.0,
         "lng": 29.65,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Mountain_Gorilla_%28Gorilla_beringei_beringei%29.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Mountain_gorilla%2C_2-year-old%2C_Mubare_Group%2C_Buhoma%2C_Bwindi_Impenetrable_Forest%2C_Uganda.jpg",
     },
     "mount kilimanjaro": {
         "lat": -3.0674,
         "lng": 37.3556,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mount_Kilimanjaro_from_Amboseli.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Kibo_Summit%2C_Mount_Kilimanjaro%2C_Tanzania_%2830819102678%29.jpg",
     },
     "ngorongoro crater": {
         "lat": -3.1615,
         "lng": 35.5877,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ngorongoro_Crater_view.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ngorongoro_landscape_%28crater_rim%29.jpg",
     },
     "meru town": {
         "lat": 0.0469,

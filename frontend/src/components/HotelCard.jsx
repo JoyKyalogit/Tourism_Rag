@@ -1,3 +1,5 @@
+import { handleImageError, THUMB_SIZES, thumbUrl } from "../utils/imageUrl";
+
 const TIER_STYLES = {
 
   budget: "bg-sky-100 text-sky-800 border-sky-200",
@@ -50,11 +52,15 @@ export default function HotelCard({ hotel }) {
 
           <img
 
-            src={hotel.image}
+            src={thumbUrl(hotel.image, THUMB_SIZES.small)}
 
             alt={hotel.name}
 
             loading="lazy"
+
+            decoding="async"
+
+            onError={handleImageError(hotel.image)}
 
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
 

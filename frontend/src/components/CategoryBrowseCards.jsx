@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CATEGORIES, getDestinationsByCategory } from "../data/catalog";
+import { handleImageError, thumbUrl } from "../utils/imageUrl";
 
 export default function CategoryBrowseCards() {
   return (
@@ -19,8 +20,11 @@ export default function CategoryBrowseCards() {
             >
               <div className="relative h-36 overflow-hidden">
                 <img
-                  src={cat.cover}
+                  src={thumbUrl(cat.cover)}
                   alt={cat.label}
+                  loading="lazy"
+                  decoding="async"
+                  onError={handleImageError(cat.cover)}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

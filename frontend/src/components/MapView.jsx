@@ -4,6 +4,7 @@ import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import { handleImageError, THUMB_SIZES, thumbUrl } from "../utils/imageUrl";
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -143,7 +144,14 @@ export default function MapView({
                       : "border-transparent opacity-75 hover:opacity-100"
                   }`}
                 >
-                  <img src={dest.image} alt={dest.name} className="h-12 w-16 object-cover" />
+                  <img
+                    src={thumbUrl(dest.image, THUMB_SIZES.tiny)}
+                    alt={dest.name}
+                    loading="lazy"
+                    decoding="async"
+                    onError={handleImageError(dest.image)}
+                    className="h-12 w-16 object-cover"
+                  />
                 </button>
               ))}
             </div>

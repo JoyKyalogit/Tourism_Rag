@@ -9,7 +9,8 @@ import HotelCard from "../components/HotelCard";
 
 import { getDestinationBySlug, CATEGORIES } from "../data/catalog";
 
-import { googleMapsUrl, wikipediaUrl } from "../utils/parseResponse";
+import { googleMapsUrl } from "../utils/parseResponse";
+import { handleImageError, THUMB_SIZES, thumbUrl } from "../utils/imageUrl";
 
 
 
@@ -71,7 +72,13 @@ export default function DestinationPage() {
 
           <div className="relative mb-6 overflow-hidden rounded-2xl border border-emerald-100 shadow-sm">
 
-            <img src={place.image} alt={place.name} className="h-56 w-full object-cover sm:h-72" />
+            <img
+              src={thumbUrl(place.image, THUMB_SIZES.hero)}
+              alt={place.name}
+              decoding="async"
+              onError={handleImageError(place.image)}
+              className="h-56 w-full object-cover sm:h-72"
+            />
 
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
 
@@ -146,7 +153,13 @@ export default function DestinationPage() {
 
                   <img
 
-                    src={src}
+                    src={thumbUrl(src, THUMB_SIZES.small)}
+
+                    loading="lazy"
+
+                    decoding="async"
+
+                    onError={handleImageError(src)}
 
                     alt={`${place.name} ${i + 1}`}
 
@@ -297,42 +310,6 @@ export default function DestinationPage() {
               Open in Google Maps
 
             </a>
-
-            <a
-
-              href={wikipediaUrl(place.name)}
-
-              target="_blank"
-
-              rel="noreferrer"
-
-              className="rounded-xl border border-emerald-100 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-emerald-50"
-
-            >
-
-              Wikipedia
-
-            </a>
-
-            {place.sourceUrl && (
-
-              <a
-
-                href={place.sourceUrl}
-
-                target="_blank"
-
-                rel="noreferrer"
-
-                className="rounded-xl border border-emerald-100 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-emerald-50"
-
-              >
-
-                Official source
-
-              </a>
-
-            )}
 
           </div>
 

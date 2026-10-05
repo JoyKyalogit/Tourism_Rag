@@ -9,21 +9,18 @@ https://safiri-kenya-web.onrender.com
 
 ---
 
-## Stack (what each tool does)
+## Stack
 
-| Tool | Role in this project |
-|------|----------------------|
-| **OpenStreetMap + Overpass API** | Source of hotel POIs (`tourism=hotel\|resort\|…`) by bounding box |
-| **Requests** | HTTP client for Overpass queries (`collect_hotels_osm.py`) |
-| **Pandas** | Dedupe/normalize raw hotel JSON → `hotels.json` |
-| **Curated JSON** | Destination guides + seed hotels with tourism-board / brand `source_url`s |
-| **sentence-transformers** (`all-MiniLM-L6-v2`) | Local embeddings of hotel + destination text |
-| **FAISS + LangChain** | Vector store + retrieval for RAG |
-| **Groq (optional)** | Free-tier LLM that rewrites grounded answers for clearer wording |
-| **FastAPI + Uvicorn + Pydantic** | REST API: ask, itinerary, hotels, scrape, reindex |
-| **React + Vite + Tailwind + Axios** | UI; search, destinations, trip plans |
-| **Leaflet** | Map markers for destinations |
-| **Render** | Optional cloud deploy (`render.yaml`) |
+- OpenStreetMap + Overpass API
+- Requests
+- Pandas
+- sentence-transformers (`all-MiniLM-L6-v2`)
+- FAISS + LangChain
+- Groq
+- FastAPI + Uvicorn + Pydantic
+- React + Vite + Tailwind + Axios
+- Leaflet
+- Render
 
 ---
 

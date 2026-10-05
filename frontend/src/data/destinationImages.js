@@ -298,6 +298,133 @@ export const DESTINATION_IMAGES = {
       "https://upload.wikimedia.org/wikipedia/commons/f/f9/People_of_Meru_Kenya_in_the_1700%E2%80%99s.jpg",
     ],
   },
+  zanzibar: {
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/04/White_sandy_beach_at_Nungwi%2C_Zanzibar.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/0/04/White_sandy_beach_at_Nungwi%2C_Zanzibar.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/fc/Nungwi_Beach_Zanzibar.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/81/Parque_Forodhani%2C_Stone_Town%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-31%2C_DD_29-31_HDR.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e9/Palacio_del_Sult%C3%A1n%2C_Stone_Town%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-31%2C_DD_25.jpg",
+    ],
+  },
+  "pemba island": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/15/Vumawimbi_Beach%2C_Pemba_Island.jpg",
+    gallery: ["https://upload.wikimedia.org/wikipedia/commons/1/15/Vumawimbi_Beach%2C_Pemba_Island.jpg"],
+  },
+  serengeti: {
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/86/Serengeti_National_Park_15_-_landscape.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/8/86/Serengeti_National_Park_15_-_landscape.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Serengeti_National_Park_11_-_landscape.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c0/Kopjes_on_the_serengeti_national_park_tanzania_africa_landscape.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0b/Serengeti-Landscape-2012.JPG",
+    ],
+  },
+  "ngorongoro crater": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ngorongoro_landscape_%28crater_rim%29.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ngorongoro_landscape_%28crater_rim%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/10/Zebras_Ngorongoro_Crater.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ngorongoro_Spitzmaulnashorn.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7e/Nature_of_Ngorongoro_Conservation_Area_%28129%29.jpg",
+    ],
+  },
+  "tarangire national park": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Elephants_in_Tarangire_National_Park_%282015%29.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/c/cc/Elephants_in_Tarangire_National_Park_%282015%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/Elephants%2C_Tarangire_National_Park_%2812%29_%2828417034820%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/05/Elephants%2C_Tarangire_National_Park_%2849%29_%2828696571415%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6d/Elephants%2C_Tarangire_National_Park_%286%29_%2828703483045%29.jpg",
+    ],
+  },
+  "queen elizabeth national park": {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/79/048_Lioness_during_golden_hour_of_the_morning_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/7/79/048_Lioness_during_golden_hour_of_the_morning_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/27/069_Waterbuck_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e5/044_Grey-headed_kingfisher_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/00/060_Olive_baboon_walking_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg",
+    ],
+  },
+  arusha: {
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Arusha_City_view.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/0/0e/Arusha_City_view.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Arusha%2C_Tanzania_%28Explored%29_-_Flickr_-_romanboed.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/df/One_of_the_Arusha_city_view.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/fe/View_of_Meru_from_Levolosi_Ward%2C_Arusha_City.jpg",
+    ],
+  },
+  kampala: {
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kampala_skyline.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kampala_skyline.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/64/Skyline_of_Kampala.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/46/Kampala-Gaddafi_Mosque.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6f/Street_Scene_in_Rubaga%2C_Kampala_01.jpg",
+    ],
+  },
+  "dar es salaam": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Dar_es_Salaam_before_dusk.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/4/41/Dar_es_Salaam_before_dusk.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e5/The_waterfront_of_Dar_es_Salaam.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/TZ_DarEsSalaam_cityview.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9f/Dar_es_Salaam_Skyline.jpg",
+    ],
+  },
+  kigali: {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/43/An_aerial_of_Kigali_Convention_Center_on_June_19%2C_2019._Photo_by_Emmanuel_Kwizera.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/4/43/An_aerial_of_Kigali_Convention_Center_on_June_19%2C_2019._Photo_by_Emmanuel_Kwizera.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2d/High_Angle_View_Of_Kigali_City_Street_on_November_29%2C_2018._Emmanuel_Kwizera.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Kigali_Convention_Center.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4f/KIGALI_city_view.jpg",
+    ],
+  },
+  "mount kilimanjaro": {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Kibo_Summit%2C_Mount_Kilimanjaro%2C_Tanzania_%2830819102678%29.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Kibo_Summit%2C_Mount_Kilimanjaro%2C_Tanzania_%2830819102678%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e7/Uhuru_Peak_Mount_Kilimanjaro_Tanzania.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/73/Kibo_UhuruPeak.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4e/Uhuru_Peak_Mt._Kilimanjaro_1.JPG",
+    ],
+  },
+  "bwindi impenetrable forest": {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Mountain_gorilla%2C_2-year-old%2C_Mubare_Group%2C_Buhoma%2C_Bwindi_Impenetrable_Forest%2C_Uganda.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Mountain_gorilla%2C_2-year-old%2C_Mubare_Group%2C_Buhoma%2C_Bwindi_Impenetrable_Forest%2C_Uganda.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ec/Gorila_de_monta%C3%B1a_%28Gorilla_beringei_beringei%29%2C_parque_nacional_de_la_Selva_Impenetrable_de_Bwindi%2C_Uganda%2C_2024-02-02%2C_DD_80.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2f/Gorila_de_monta%C3%B1a_%28Gorilla_beringei_beringei%29%2C_parque_nacional_de_la_Selva_Impenetrable_de_Bwindi%2C_Uganda%2C_2024-02-02%2C_DD_51.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2e/064_Mountain_gorilla_climbing_a_tree_at_Bwindi_Impenetrable_Forest_National_Park_%28crop%29_Photo_by_Giles_Laurent.jpg",
+    ],
+  },
+  "lake victoria": {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/ce/Scene_in_Fishing_Village_along_Shore_of_Lake_Victoria_-_Entebbe_-_Uganda.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/c/ce/Scene_in_Fishing_Village_along_Shore_of_Lake_Victoria_-_Entebbe_-_Uganda.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/63/Homes_around_lake_Victoria.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Beach_within_Botanical_Garden%2C_Entebbe%2C_Uganda.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d7/Sunset_Over_Lake_Victoria.jpg",
+    ],
+  },
+  "volcanoes national park": {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/35/Mount_Mikeno_%28DR_Congo%29_and_Mount_Karisimbi_%28Rwanda%29%2C_two_extinct_volcanoes_in_the_Virunga_mountain_range._%2819556231290%29.jpg",
+    gallery: [
+      "https://upload.wikimedia.org/wikipedia/commons/3/35/Mount_Mikeno_%28DR_Congo%29_and_Mount_Karisimbi_%28Rwanda%29%2C_two_extinct_volcanoes_in_the_Virunga_mountain_range._%2819556231290%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/de/Mountain_gorilla_from_Susa_Group_in_Karisimbi_thicket_of_Volcanoes_National_Park_in_Rwanda._Emmanuel_Kwizera.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/53/Volcano_Bisoke.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4d/Mist_over_Gorilla_Mountain_Rwanda_by_Bill_Hallier.jpg",
+    ],
+  },
 };
 
 const FALLBACK_IMAGE =

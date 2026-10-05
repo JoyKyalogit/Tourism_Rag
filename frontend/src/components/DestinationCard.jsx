@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { getCategory, getPriceKes, getRating } from "../utils/destination";
 import { googleMapsUrl } from "../utils/parseResponse";
 import { toSlug } from "../data/catalog";
+import { handleImageError, thumbUrl } from "../utils/imageUrl";
 
 const CATEGORY_STYLES = {
   Beach: "bg-sky-500/90 text-white shadow-sky-500/30",
@@ -40,14 +41,15 @@ export default function DestinationCard({
     >
       <div className="relative h-48 overflow-hidden">
         <img
-          src={destination.image}
+          src={thumbUrl(destination.image)}
           alt={destination.name}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
           loading="lazy"
-          onError={(e) => {
-            e.currentTarget.src =
-              "https://upload.wikimedia.org/wikipedia/commons/8/83/Nairobi_skyline_P1000019.jpg";
-          }}
+          decoding="async"
+          onError={handleImageError(
+            destination.image,
+            thumbUrl("https://upload.wikimedia.org/wikipedia/commons/8/83/Nairobi_skyline_P1000019.jpg"),
+          )}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 

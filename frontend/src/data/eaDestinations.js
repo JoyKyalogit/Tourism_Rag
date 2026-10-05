@@ -15,7 +15,6 @@ export const EA_DESTINATIONS = [
     type: "Beach",
     lat: -6.1659,
     lng: 39.2026,
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Nungwi_beach_Zanzibar.jpg",
   },
   {
     destination: "Pemba Island",
@@ -30,7 +29,6 @@ export const EA_DESTINATIONS = [
     type: "Beach",
     lat: -5.0319,
     lng: 39.7756,
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pemba_Island_beach.jpg",
   },
   {
     destination: "Serengeti",
@@ -46,7 +44,6 @@ export const EA_DESTINATIONS = [
     type: "Safari",
     lat: -2.3333,
     lng: 34.8333,
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Serengeti_Landscape_2012_01.jpg",
   },
   {
     destination: "Ngorongoro Crater",
@@ -62,7 +59,6 @@ export const EA_DESTINATIONS = [
     type: "Safari",
     lat: -3.1615,
     lng: 35.5877,
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ngorongoro_Crater_view.jpg",
   },
   {
     destination: "Tarangire National Park",
@@ -77,7 +73,6 @@ export const EA_DESTINATIONS = [
     type: "Safari",
     lat: -3.8333,
     lng: 36.0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Tarangire_Elephants.jpg",
   },
   {
     destination: "Queen Elizabeth National Park",
@@ -92,7 +87,6 @@ export const EA_DESTINATIONS = [
     type: "Safari",
     lat: -0.2,
     lng: 30.0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Kazinga_Channel%2C_Queen_Elizabeth_NP.jpg",
   },
   {
     destination: "Arusha",
@@ -107,7 +101,6 @@ export const EA_DESTINATIONS = [
     type: "City",
     lat: -3.3869,
     lng: 36.683,
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Arusha_city_view.jpg",
   },
   {
     destination: "Kampala",
@@ -122,7 +115,6 @@ export const EA_DESTINATIONS = [
     type: "City",
     lat: 0.3476,
     lng: 32.5825,
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kampala_Skyline.jpg",
   },
   {
     destination: "Dar es Salaam",
@@ -137,7 +129,6 @@ export const EA_DESTINATIONS = [
     type: "City",
     lat: -6.7924,
     lng: 39.2083,
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Dar_es_Salaam_skyline.jpg",
   },
   {
     destination: "Kigali",
@@ -152,7 +143,6 @@ export const EA_DESTINATIONS = [
     type: "City",
     lat: -1.9441,
     lng: 30.0619,
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Kigali_City.jpg",
   },
   {
     destination: "Mount Kilimanjaro",
@@ -167,7 +157,6 @@ export const EA_DESTINATIONS = [
     type: "Adventure",
     lat: -3.0674,
     lng: 37.3556,
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mount_Kilimanjaro_from_Amboseli.jpg",
   },
   {
     destination: "Bwindi Impenetrable Forest",
@@ -182,7 +171,6 @@ export const EA_DESTINATIONS = [
     type: "Adventure",
     lat: -1.0,
     lng: 29.65,
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Mountain_Gorilla_%28Gorilla_beringei_beringei%29.jpg",
   },
   {
     destination: "Lake Victoria",
@@ -197,7 +185,6 @@ export const EA_DESTINATIONS = [
     type: "Nature",
     lat: -0.5,
     lng: 33.0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Lake_Victoria_by_Sentinel-2.jpg",
   },
   {
     destination: "Volcanoes National Park",
@@ -212,6 +199,5 @@ export const EA_DESTINATIONS = [
     type: "Nature",
     lat: -1.4427,
     lng: 29.538,
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Virunga_Mountains.jpg",
   },
 ];
