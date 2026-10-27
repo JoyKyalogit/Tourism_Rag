@@ -6,7 +6,10 @@ export function getFriendlyError(error) {
   }
 
   if (!error.response) {
-    return "Cannot reach the server. Restart the backend on port 8000, then restart the frontend dev server (`npm run dev`) and try again.";
+    if (import.meta.env.DEV) {
+      return "Cannot reach the server. Restart the backend on port 8000, then restart the frontend (`npm run dev`) and try again.";
+    }
+    return "Cannot reach the travel API right now. The free server may be waking up — wait about a minute and try again.";
   }
 
   const status = error.response.status;

@@ -1717,6 +1717,34 @@ def _generate_itinerary(query: str, destinations: list[dict[str, Any]], days: in
     return itinerary
 
 
+def try_catalog_ask(query: str) -> dict[str, Any] | None:
+    """Answer chitchat / curated catalog questions without loading FAISS or torch.
+
+    Used on Render free tier so common portfolio demos work even when the
+    embedding model is still downloading or OOMs.
+    """
+    if _is_chitchat_query(query):
+        return _chitchat_answer(query)
+
+    catalog = _catalog_hotel_answer(query)
+    if catalog:
+        return apply_polish(catalog, query)
+
+    catalog = _catalog_activity_answer(query)
+    if catalog:
+        return apply_polish(catalog, query)
+
+    catalog = _catalog_country_answer(query)
+    if catalog:
+        return catalog
+
+    catalog = _catalog_theme_answer(query)
+    if catalog:
+        return apply_polish(catalog, query)
+
+    return None
+
+
 class TravelAfricaRAG:
     def __init__(self) -> None:
         self.embeddings = _create_embeddings()
@@ -1794,24 +1822,9 @@ class TravelAfricaRAG:
         travel_type: str | None = None,
         season: str | None = None,
     ) -> dict[str, Any]:
-        if _is_chitchat_query(query):
-            return _chitchat_answer(query)
-
-        catalog = _catalog_hotel_answer(query)
-        if catalog:
-            return apply_polish(catalog, query)
-
-        catalog = _catalog_activity_answer(query)
-        if catalog:
-            return apply_polish(catalog, query)
-
-        catalog = _catalog_country_answer(query)
+        catalog = try_catalog_ask(query)
         if catalog:
             return catalog
-
-        catalog = _catalog_theme_answer(query)
-        if catalog:
-            return apply_polish(catalog, query)
 
         enriched_query = _enrich_query(query, budget=budget, travel_type=travel_type, season=season)
         # Still no place/country/theme after enrichment? Don't invent "top matches".

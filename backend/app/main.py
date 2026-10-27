@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import threading
@@ -21,7 +22,7 @@ from pydantic import BaseModel, Field
 from .config import HOTELS_PATH
 from .hotels import filter_by_location, hotel_to_source, load_hotels, save_hotels
 from .llm import groq_enabled
-from .rag_service import TravelAfricaRAG, build_vector_index
+from .rag_service import TravelAfricaRAG, build_vector_index, try_catalog_ask
 
 BACKEND_ROOT = Path(__file__).resolve().parents[1]
 
@@ -123,11 +124,14 @@ def get_rag() -> TravelAfricaRAG:
 
 @app.on_event("startup")
 def warmup_rag() -> None:
-    """Bind the port first; load embeddings in the background.
+    """Optionally warm embeddings in the background after the port is open.
 
-    Render kills deploys that do not open $PORT within ~5 minutes. Loading
-    HuggingFaceEmbeddings + FAISS often takes longer on the free tier.
+    Skip on free Render (SKIP_RAG_WARMUP=1): loading torch there often OOMs
+    and returns 502. Catalog answers still work via try_catalog_ask.
     """
+    if os.getenv("SKIP_RAG_WARMUP", "").strip().lower() in {"1", "true", "yes"}:
+        print("RAG warmup skipped (SKIP_RAG_WARMUP)")
+        return
 
     def _load() -> None:
         try:
@@ -206,11 +210,42 @@ def create_embeddings() -> dict[str, str]:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
 
+def _ask_safe(
+    query: str,
+    *,
+    budget: str | None = None,
+    travel_type: str | None = None,
+    season: str | None = None,
+) -> dict[str, Any]:
+    # Prefer catalog so demos work without loading the heavy embedding model.
+    catalog = try_catalog_ask(query)
+    if catalog is not None:
+        return catalog
+    try:
+        return get_rag().ask(
+            query,
+            budget=budget,
+            travel_type=travel_type,
+            season=season,
+        )
+    except Exception as exc:  # noqa: BLE001
+        # Avoid 502/crash loops when torch/embeddings OOM on free Render.
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "The search index is still starting (or ran out of memory on this plan). "
+                "Try a country or destination question like 'places to visit in Kenya', "
+                "or wait a minute and try again."
+            ),
+        ) from exc
+
+
 @app.post("/ask", response_model=AskResponse)
 def ask_question(payload: QuestionRequest) -> AskResponse:
     try:
-        result = get_rag().ask(payload.question)
-        return AskResponse(**result)
+        return AskResponse(**_ask_safe(payload.question))
+    except HTTPException:
+        raise
     except RuntimeError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:  # noqa: BLE001
@@ -220,13 +255,16 @@ def ask_question(payload: QuestionRequest) -> AskResponse:
 @app.post("/api/ask", response_model=AskResponse)
 def ask_legacy(payload: AskRequest) -> AskResponse:
     try:
-        result = get_rag().ask(
-            payload.query,
-            budget=payload.budget,
-            travel_type=payload.travel_type,
-            season=payload.season,
+        return AskResponse(
+            **_ask_safe(
+                payload.query,
+                budget=payload.budget,
+                travel_type=payload.travel_type,
+                season=payload.season,
+            )
         )
-        return AskResponse(**result)
+    except HTTPException:
+        raise
     except RuntimeError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:  # noqa: BLE001
