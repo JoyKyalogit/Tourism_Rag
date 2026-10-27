@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+import threading
 from pathlib import Path
 from typing import Any, Literal
 
@@ -122,11 +123,20 @@ def get_rag() -> TravelAfricaRAG:
 
 @app.on_event("startup")
 def warmup_rag() -> None:
-    """Load embeddings + FAISS at boot so the first /api/ask is fast."""
-    try:
-        get_rag()
-    except Exception as exc:  # noqa: BLE001
-        print(f"RAG warmup skipped: {exc}")
+    """Bind the port first; load embeddings in the background.
+
+    Render kills deploys that do not open $PORT within ~5 minutes. Loading
+    HuggingFaceEmbeddings + FAISS often takes longer on the free tier.
+    """
+
+    def _load() -> None:
+        try:
+            get_rag()
+            print("RAG warmup complete")
+        except Exception as exc:  # noqa: BLE001
+            print(f"RAG warmup skipped: {exc}")
+
+    threading.Thread(target=_load, daemon=True, name="rag-warmup").start()
 
 
 def _run_script(script_name: str) -> str:

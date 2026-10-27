@@ -1,3 +1,4 @@
+# Install CPU torch first (see render.yaml). Do not pull CUDA wheels on Render.
 fastapi
 uvicorn[standard]
 langchain-core
