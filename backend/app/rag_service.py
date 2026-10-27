@@ -203,16 +203,20 @@ EAST_AFRICA_COUNTRIES = frozenset({"kenya", "tanzania", "uganda", "rwanda"})
 
 
 def _create_embeddings() -> HuggingFaceEmbeddings:
+    """Load MiniLM from cache, or download once (needed on fresh Render disks)."""
     try:
-        # Avoid network lookups on every request once model files are cached.
         return HuggingFaceEmbeddings(
             model_name=EMBED_MODEL,
             model_kwargs={"local_files_only": True},
         )
-    except Exception as exc:  # noqa: BLE001
-        raise RuntimeError(
-            "Embeddings model is not available locally. Run `python scripts/ingest.py` once with internet access."
-        ) from exc
+    except Exception:
+        try:
+            return HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+        except Exception as exc:  # noqa: BLE001
+            raise RuntimeError(
+                "Embeddings model could not be loaded or downloaded. "
+                "Check server internet access, or run `python scripts/ingest.py` once."
+            ) from exc
 
 
 def _hotel_to_document(row: dict[str, Any]) -> Document:
